@@ -1,0 +1,3 @@
+Hello This is HSM.
+This is a sample spark RDD over text file.
+Sparky is out to go wild and zap everyone.
