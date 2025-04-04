@@ -1,0 +1,84 @@
+=== Google+ Social Network Analysis ===
+Analysis started at: 2025-03-29 20:26:51
+
+--- Loading Edge Dataset ---
+Reading edge data from: gplus_combined.txt
+Creating vertex DataFrame...
+Dataset loaded with 107614 vertices and 30494866 edges
+Loading completed in 15.47 seconds
+
+--- Large graph detected (30494866 edges). Using batch processing approach. ---
+
+--- Graph Basic Analysis ---
+Total Nodes: 107614
+Total Edges: 30494866
+Basic counting completed in 0.50 seconds
+
+--- Computing degree distribution ---
+Degree computation completed in 0.34 seconds
+
+--- Top 10 Most Connected Nodes ---
++---------------------+------+
+|id                   |degree|
++---------------------+------+
+|111091089527727420853|109998|
+|105237212888595777019|71023 |
+|104987932455782713675|69906 |
+|102476152658204495450|65013 |
+|109330684746468207713|62193 |
+|107362628080904735459|60627 |
+|101261243957067319422|58253 |
+|105390077271236874234|58112 |
+|110945896776944314708|54329 |
+|113686253941057080055|54015 |
++---------------------+------+
+
+Top nodes query completed in 3.53 seconds
+
+--- Degree Distribution Analysis ---
+Degree Distribution Statistics:
++----------+----------+----------------+-------------+----------------+
+|min_degree|max_degree|avg_degree      |median_degree|stddev_degree   |
++----------+----------+----------------+-------------+----------------+
+|1         |109998    |566.745330533202|53.0         |2320.64325416567|
++----------+----------+----------------+-------------+----------------+
+
+Degree Distribution by Range:
++------------+----------+
+|degree_range|node_count|
++------------+----------+
+|001-010     |24680     |
+|011-050     |28160     |
+|051-100     |13165     |
+|10000+      |1125      |
+|1001-5000   |8010      |
+|101-500     |24396     |
+|5001-10000  |1517      |
+|501-1000    |6561      |
++------------+----------+
+
+Degree statistics completed in 1.38 seconds
+
+--- Visualizing Degree Distribution ---
+Data preparation completed in 1.49 seconds
+Visualization completed in 2.43 seconds
+Degree distribution visualization saved to 'degree_distribution_large_dataset.png'
+
+--- Creating sample graph for advanced algorithms ---
+Sample graph created with 84378 vertices and 30402562 edges
+
+--- PageRank Analysis (Iterations: 10) ---
+Error in PageRank: Exactly one of maxIter or tol should be set.
+
+--- Community Detection (Optimized) ---
+Running Connected Components algorithm...
+Error in community detection: GraphFrame.connectedComponents() got an unexpected keyword argument 'maxIter'
+
+=== Analysis Summary ===
+Total Nodes: 107614
+Total Edges: 30494866
+Analysis completed at: 2025-03-29 20:27:45
+Total execution time: 54.25 seconds
+
+--- Cleaning up resources ---
+Total execution time: 55.07 seconds

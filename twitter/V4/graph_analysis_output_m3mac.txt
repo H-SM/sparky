@@ -1,0 +1,245 @@
+Starting Social Graph Analysis on MacBook Air M3 (16GB)
+Date and Time: 2025-03-29 19:46:25
+Python Version: 3.12.0 (main, Jan 13 2025, 11:22:07) [Clang 14.0.3 (clang-1403.0.22.14.1)]
+
+Initializing Spark Session with memory-optimized settings...
+
+Will attempt analysis with sample sizes: ['1.0%', '5.0%', '10.0%']
+
+================================================================================
+STARTING ANALYSIS WITH 1.0% SAMPLE SIZE
+================================================================================
+
+--- Loading Edge Dataset (Sample: 1.0%) ---
+Sampling 1.0% of the original dataset
+Loaded 299279 unique edges
+Found 52295 unique vertices
+
+--- Graph Basic Analysis ---
+Total Nodes: 52295
+Total Edges: 299279
+
+Calculating degree distribution...
+
+--- Top 10 Most Connected Nodes ---
++---------------------+------+
+|id                   |degree|
++---------------------+------+
+|111091089527727420853|979   |
+|105237212888595777019|679   |
+|104987932455782713675|665   |
+|102476152658204495450|583   |
+|109330684746468207713|572   |
+|105390077271236874234|560   |
+|107362628080904735459|560   |
+|101261243957067319422|558   |
+|113686253941057080055|508   |
+|110945896776944314708|495   |
++---------------------+------+
+
+
+--- Degree Distribution Analysis ---
+Degree Distribution Statistics:
++----------+----------+-----------------+-------------+------------------+
+|min_degree|max_degree|avg_degree       |median_degree|stddev_degree     |
++----------+----------+-----------------+-------------+------------------+
+|1         |979       |11.44579787742614|3.0          |31.124500662932363|
++----------+----------+-----------------+-------------+------------------+
+
+Degree Distribution by Range:
++------------+----------+
+|degree_range|node_count|
++------------+----------+
+|1-5         |35656     |
+|101-500     |1076      |
+|11-50       |7896      |
+|500+        |9         |
+|51-100      |1512      |
+|6-10        |6146      |
++------------+----------+
+
+
+Preparing degree distribution visualization...
+Visualizing 706 unique degree values...
+
+Degree distribution visualization saved to 'degree_distribution_1pct.png'
+
+--- GraphFrames PageRank Analysis ---
+
+Running PageRank with 5 iterations...
+Error in PageRank for 5 iterations: Exactly one of maxIter or tol should be set.
+
+Running PageRank with 10 iterations...
+Error in PageRank for 10 iterations: Exactly one of maxIter or tol should be set.
+
+--- Community Detection (Memory-Safe Approach) ---
+
+Running Connected Components algorithm...
+Error in Community Detection: GraphFrame.connectedComponents() got an unexpected keyword argument 'maxIter'
+
+Skipping full community detection due to memory constraints.
+
+================================================================================
+COMPLETED ANALYSIS WITH 1.0% SAMPLE SIZE
+================================================================================
+
+================================================================================
+STARTING ANALYSIS WITH 5.0% SAMPLE SIZE
+================================================================================
+
+--- Loading Edge Dataset (Sample: 5.0%) ---
+Sampling 5.0% of the original dataset
+Loaded 1377682 unique edges
+Found 78838 unique vertices
+
+--- Graph Basic Analysis ---
+Total Nodes: 78838
+Total Edges: 1377682
+
+Calculating degree distribution...
+
+--- Top 10 Most Connected Nodes ---
++---------------------+------+
+|id                   |degree|
++---------------------+------+
+|111091089527727420853|4039  |
+|105237212888595777019|2685  |
+|104987932455782713675|2593  |
+|102476152658204495450|2414  |
+|109330684746468207713|2280  |
+|107362628080904735459|2271  |
+|105390077271236874234|2253  |
+|101261243957067319422|2210  |
+|110945896776944314708|2143  |
+|113686253941057080055|2074  |
++---------------------+------+
+
+
+--- Degree Distribution Analysis ---
+Degree Distribution Statistics:
++----------+----------+-----------------+-------------+------------------+
+|min_degree|max_degree|avg_degree       |median_degree|stddev_degree     |
++----------+----------+-----------------+-------------+------------------+
+|1         |4039      |34.94969430985058|6.0          |111.04403798346678|
++----------+----------+-----------------+-------------+------------------+
+
+Degree Distribution by Range:
++------------+----------+
+|degree_range|node_count|
++------------+----------+
+|1-5         |38856     |
+|101-500     |5095      |
+|11-50       |18601     |
+|500+        |907       |
+|51-100      |4378      |
+|6-10        |11001     |
++------------+----------+
+
+
+Preparing degree distribution visualization...
+Visualizing 2034 unique degree values...
+
+Degree distribution visualization saved to 'degree_distribution_5pct.png'
+
+--- GraphFrames PageRank Analysis ---
+
+Running PageRank with 5 iterations...
+Error in PageRank for 5 iterations: Exactly one of maxIter or tol should be set.
+
+Running PageRank with 10 iterations...
+Error in PageRank for 10 iterations: Exactly one of maxIter or tol should be set.
+
+--- Community Detection (Memory-Safe Approach) ---
+
+Running Connected Components algorithm...
+Error in Community Detection: GraphFrame.connectedComponents() got an unexpected keyword argument 'maxIter'
+
+Skipping full community detection due to memory constraints.
+
+================================================================================
+COMPLETED ANALYSIS WITH 5.0% SAMPLE SIZE
+================================================================================
+
+================================================================================
+STARTING ANALYSIS WITH 10.0% SAMPLE SIZE
+================================================================================
+
+--- Loading Edge Dataset (Sample: 10.0%) ---
+Sampling 10.0% of the original dataset
+Loaded 2543409 unique edges
+Found 88328 unique vertices
+
+--- Graph Basic Analysis ---
+Total Nodes: 88328
+Total Edges: 2543409
+
+Calculating degree distribution...
+
+--- Top 10 Most Connected Nodes ---
++---------------------+------+
+|id                   |degree|
++---------------------+------+
+|111091089527727420853|6591  |
+|105237212888595777019|4410  |
+|104987932455782713675|4250  |
+|102476152658204495450|3923  |
+|107362628080904735459|3788  |
+|105390077271236874234|3747  |
+|109330684746468207713|3712  |
+|101261243957067319422|3611  |
+|106189723444098348646|3577  |
+|110945896776944314708|3453  |
++---------------------+------+
+
+
+--- Degree Distribution Analysis ---
+Degree Distribution Statistics:
++----------+----------+------------------+-------------+------------------+
+|min_degree|max_degree|avg_degree        |median_degree|stddev_degree     |
++----------+----------+------------------+-------------+------------------+
+|1         |6591      |57.590096005796575|9.0          |182.89923506366455|
++----------+----------+------------------+-------------+------------------+
+
+Degree Distribution by Range:
++------------+----------+
+|degree_range|node_count|
++------------+----------+
+|1-5         |35342     |
+|101-500     |8061      |
+|11-50       |23770     |
+|500+        |2133      |
+|51-100      |6572      |
+|6-10        |12450     |
++------------+----------+
+
+
+Preparing degree distribution visualization...
+Visualizing 2482 unique degree values...
+
+Degree distribution visualization saved to 'degree_distribution_10pct.png'
+
+--- GraphFrames PageRank Analysis ---
+
+Running PageRank with 5 iterations...
+Error in PageRank for 5 iterations: Exactly one of maxIter or tol should be set.
+
+Running PageRank with 10 iterations...
+Error in PageRank for 10 iterations: Exactly one of maxIter or tol should be set.
+
+--- Community Detection (Memory-Safe Approach) ---
+
+Running Connected Components algorithm...
+Error in Community Detection: GraphFrame.connectedComponents() got an unexpected keyword argument 'maxIter'
+
+Skipping full community detection due to memory constraints.
+
+================================================================================
+COMPLETED ANALYSIS WITH 10.0% SAMPLE SIZE
+================================================================================
+
+--- FINAL RESULTS ---
+Sample Size 1.0%: Success
+Sample Size 5.0%: Success
+Sample Size 10.0%: Success
+
+Analysis complete. Check output files for results.

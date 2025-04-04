@@ -1,0 +1,111 @@
+Analysis started at: 2025-03-29 19:19:39
+Initializing Spark session...
+Loading dataset...
+Loading data from gplus_combined.txt with sampling fraction 0.5
+Sampling 50.0% of edges to reduce graph size
+Creating vertices DataFrame
+Loaded graph with 103441 vertices and 15246438 edges
+Creating GraphFrame...
+Performing basic graph analysis...
+
+--- Graph Basic Analysis ---
+Total Nodes: 103441
+Total Edges: 15246438
+Graph Density: 0.0014249091
+Computing node degrees...
+
+--- Degree Statistics ---
++----------+----------+------------------+-------------+
+|min_degree|max_degree|        avg_degree|median_degree|
++----------+----------+------------------+-------------+
+|         1|     54924|294.78520122581955|           29|
++----------+----------+------------------+-------------+
+
+
+--- Top 10 Most Connected Nodes ---
++---------------------+------+
+|id                   |degree|
++---------------------+------+
+|111091089527727420853|54924 |
+|105237212888595777019|35583 |
+|104987932455782713675|34829 |
+|102476152658204495450|32637 |
+|109330684746468207713|31172 |
+|107362628080904735459|30154 |
+|105390077271236874234|29057 |
+|101261243957067319422|28980 |
+|110945896776944314708|27164 |
+|113686253941057080055|26810 |
++---------------------+------+
+
+Computing degree distribution...
+
+--- Degree Distribution Sample ---
++------+----------+--------------------+
+|degree|node_count|          percentage|
++------+----------+--------------------+
+|     1|      6805| 0.06578629363598573|
+|     2|      4669|0.045136841291170814|
+|     3|      3874|0.037451300741485484|
+|     4|      3189|0.030829168318171712|
+|     5|      2823|0.027290919461335446|
+|     6|      2543| 0.02458406241238967|
+|     7|      2270| 0.02194487678966754|
+|     8|      2112|0.020417436026333852|
+|     9|      1953|0.018880327916396787|
+|    10|      1734|0.016763179010257055|
++------+----------+--------------------+
+only showing top 10 rows
+
+Performing PageRank analysis...
+
+--- PageRank Analysis ---
+Running PageRank with 3 iterations...
+Error in PageRank for 3 iterations: Exactly one of maxIter or tol should be set.
+Running PageRank with 5 iterations...
+Error in PageRank for 5 iterations: Exactly one of maxIter or tol should be set.
+Running PageRank with 10 iterations...
+Error in PageRank for 10 iterations: Exactly one of maxIter or tol should be set.
+Performing community detection...
+
+--- Community Detection ---
+Running connected components algorithm...
+Error in community detection: An error occurred while calling o128.run.
+: java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3537)
+	at java.base/java.lang.AbstractStringBuilder.ensureCapacityInternal(AbstractStringBuilder.java:228)
+	at java.base/java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:582)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:179)
+	at scala.collection.mutable.StringBuilder.append(StringBuilder.scala:213)
+	at scala.collection.TraversableOnce$appender$1.apply(TraversableOnce.scala:418)
+	at scala.collection.TraversableOnce$appender$1.apply(TraversableOnce.scala:410)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.TraversableOnce.addString(TraversableOnce.scala:424)
+	at scala.collection.TraversableOnce.addString$(TraversableOnce.scala:407)
+	at scala.collection.AbstractIterator.addString(Iterator.scala:1431)
+	at scala.collection.TraversableOnce.mkString(TraversableOnce.scala:377)
+	at scala.collection.TraversableOnce.mkString$(TraversableOnce.scala:376)
+	at scala.collection.AbstractIterator.mkString(Iterator.scala:1431)
+	at scala.runtime.ScalaRunTime$._toString(ScalaRunTime.scala:165)
+	at org.apache.spark.sql.execution.columnar.CachedRDDBuilder.toString(InMemoryRelation.scala:204)
+	at java.base/java.lang.String.valueOf(String.java:4222)
+	at scala.collection.mutable.StringBuilder.append(StringBuilder.scala:203)
+	at scala.collection.TraversableOnce$appender$1.apply(TraversableOnce.scala:419)
+	at scala.collection.TraversableOnce$appender$1.apply(TraversableOnce.scala:410)
+	at scala.collection.Iterator.foreach(Iterator.scala:943)
+	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+	at scala.collection.TraversableOnce.addString(TraversableOnce.scala:424)
+	at scala.collection.TraversableOnce.addString$(TraversableOnce.scala:407)
+	at scala.collection.AbstractIterator.addString(Iterator.scala:1431)
+	at scala.collection.TraversableOnce.mkString(TraversableOnce.scala:377)
+	at scala.collection.TraversableOnce.mkString$(TraversableOnce.scala:376)
+	at scala.collection.AbstractIterator.mkString(Iterator.scala:1431)
+	at scala.collection.TraversableOnce.mkString(TraversableOnce.scala:379)
+
+An error occurred in the main analysis: cannot unpack non-iterable NoneType object
+Stopping Spark session...
+Spark session stopped
+Analysis completed at: 2025-03-29 19:20:56
